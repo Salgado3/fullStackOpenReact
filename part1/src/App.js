@@ -1,11 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 
-const App = (props) => {
-  const {counter} = props
+const App = () => {
+  const [ counter, setCounter] = useState(0)
+  
+setTimeout(
+  () => setCounter(counter +1),5000
+)
+
   return (
     <div>{counter}</div>
   )
+  
 }
 
 
